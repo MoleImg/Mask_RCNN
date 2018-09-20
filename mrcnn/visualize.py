@@ -1,3 +1,4 @@
+
 """
 Mask R-CNN
 Display and Visualization Functions.
@@ -6,7 +7,7 @@ Copyright (c) 2017 Matterport, Inc.
 Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
 """
-
+# -*- coding: utf-8 -*-
 import os
 import sys
 import random
@@ -144,8 +145,8 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             caption = "{} {:.3f}".format(label, score) if score else label
         else:
             caption = captions[i]
-        ax.text(x1, y1 + 8, caption,
-                color='w', size=11, backgroundcolor="none")
+        # ax.text(x1, y1 + 8, caption.encode('utf-8'),
+        #         color='w', size=11, backgroundcolor="none")
 
         # Mask
         mask = masks[:, :, i]
